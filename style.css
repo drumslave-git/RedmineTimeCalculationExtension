@@ -1,0 +1,59 @@
+#time_entries_report .total-hours{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#time-calculation-left {
+    display: inline-block;
+    padding: 5px 10px;
+    background: #c9cbff;
+    vertical-align: middle;
+    margin-left: .3em;
+}
+
+#time-calculation a{
+    margin-right: .3em;
+}
+
+#time-calculation a img{
+    width: 30px;
+    vertical-align: middle;
+}
+
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+    opacity: 0; /* Hidden by default. Visible on click */
+    min-width: 250px; /* Set a default minimum width */
+    margin-left: -125px; /* Divide value of min-width by 2 */
+    background-color: #333; /* Black background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 2px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    left: 50%; /* Center the snackbar */
+    bottom: 30px; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+    opacity: 1;
+    animation: fadein 0.5s;
+}
+
+#snackbar.hide {
+    animation: fadeout 0.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}

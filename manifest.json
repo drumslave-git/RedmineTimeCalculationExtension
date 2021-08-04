@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Redmine Time Calculation",
+  "version": "0.0.1",
+  "icons": { "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png" },
+  "content_scripts": [
+    {
+      "matches": ["https://*/spent_time*"],
+      "css": ["style.css"],
+      "js": ["script.js"]
+    }
+  ],
+  "permissions": ["storage"],
+  "web_accessible_resources": [
+    {
+      "resources": [ "images/upwork.png" ],
+      "matches": ["https://*/*"]
+    }
+  ]
+}
